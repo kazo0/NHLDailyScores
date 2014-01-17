@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "NHL Daily Scores",
+  "description": "This extension provides the most up-to-date scores for the day's current NHL games",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://m.thescore.com/"
+  ],
+   "web_accessible_resources": [
+    "popup.js",
+    "jquery.js",
+    "nhl.css",
+    "application.css"
+  ]
+}

@@ -1,0 +1,242 @@
+.nhl #list select {
+  width: 100px;
+  height: 26px;
+  margin: 14px 5px 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background: url(/images/global_select_bg.png) right no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+.nhl #list table.gamelist {
+  width: 100%;
+  padding: 8px; }
+.nhl #list table.alt {
+  background: rgba(0, 0, 0, 0.2); }
+.nhl #list table.special {
+  background: rgba(0, 0, 0, 0.6); }
+.nhl #list td.team {
+  width: 40%; }
+.nhl #list td.loser {
+  font-weight: normal; }
+.nhl #list td.score {
+  width: 15%;
+  text-align: left; }
+  .nhl #list td.score img {
+    margin-bottom: -3px; }
+.nhl #list td.time, .nhl #list td.blog {
+  width: 30%;
+  text-align: right; }
+.nhl #list td.blog {
+  color: #ffb501; }
+.nhl #list td.go {
+  width: 15%;
+  text-align: right; }
+  .nhl #list td.go img {
+    margin-top: 3px; }
+.nhl #score {
+  margin-bottom: 10px;
+  -webkit-border-radius: 10px;
+  background: black url(/images/global_scoreboard_bg.png) repeat-x; }
+  .nhl #score #time {
+    padding: 5px 0 2px 0;
+    text-align: center; }
+  .nhl #score table {
+    width: 100%;
+    border-collapse: collapse; }
+    .nhl #score table td {
+      padding: 10px; }
+    .nhl #score table td.logo {
+      width: 60px;
+      padding: 10px 10px 5px 10px;
+      text-align: center; }
+      .nhl #score table td.logo img {
+        padding: 5px 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        background: white; }
+    .nhl #score table td.tds {
+      padding: 0;
+      font-size: 26px;
+      color: #ffb501; }
+      .nhl #score table td.tds img.ball {
+        margin: 0 0 3px 0; }
+  .nhl #score .centered {
+    margin-bottom: 5px; }
+  .nhl #score #scoreboard {
+    padding: 10px 0; }
+    .nhl #score #scoreboard table {
+      width: auto;
+      margin: 0 auto; }
+      .nhl #score #scoreboard table th {
+        color: rgba(255, 255, 255, 0.5); }
+      .nhl #score #scoreboard table td {
+        padding: 2px 8px; }
+  .nhl #score #stars {
+    border: 0;
+    margin: auto;
+    padding: 0px 20px 0px 20px;
+    -webkit-border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 0px; }
+    .nhl #score #stars legend {
+      text-decoration: underline; }
+    .nhl #score #stars ul {
+      list-style-type: none;
+      text-align: left; }
+      .nhl #score #stars ul li {
+        text-align: left; }
+.nhl #forecast h3 {
+  margin-bottom: 0; }
+.nhl #forecast p {
+  margin-top: 0; }
+.nhl #forecast ul {
+  padding-left: 18px;
+  margin-top: 4px; }
+.nhl #player_stats .home_tab, .nhl #player_stats .away_tab {
+  display: block;
+  float: left;
+  margin-bottom: -1px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  background: rgba(0, 0, 0, 0.2); }
+.nhl #player_stats .away_tab {
+  margin-left: 10px; }
+.nhl #player_stats .home_tab {
+  margin-left: 5px; }
+.nhl #player_stats .home_tab.off, .nhl #player_stats .away_tab.off {
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.1); }
+.nhl #player_stats table {
+  width: 100%;
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2); }
+  .nhl #player_stats table tr.alt {
+    background: rgba(0, 0, 0, 0.2); }
+  .nhl #player_stats table th {
+    padding: 4px 2px;
+    font-size: 12px;
+    color: #ffb501; }
+  .nhl #player_stats table th.grouped {
+    background: rgba(0, 0, 0, 0.2); }
+  .nhl #player_stats table th.grouped_end {
+    -webkit-border-top-right-radius: 10px;
+    background: rgba(0, 0, 0, 0.2); }
+  .nhl #player_stats table td {
+    padding: 4px 2px;
+    font-size: 12px;
+    text-align: center; }
+  .nhl #player_stats table td.player, .nhl #player_stats table th.player, .nhl #player_stats table td.goalie, .nhl #player_stats table th.goalie {
+    text-align: left; }
+  .nhl #player_stats table tr.goals th {
+    padding-top: 12px; }
+.nhl #shootout fieldset.shoot_out, .nhl #shootout fieldset.summary, .nhl #scoring_summary fieldset.shoot_out, .nhl #scoring_summary fieldset.summary, .nhl #star_summary fieldset.shoot_out, .nhl #star_summary fieldset.summary, .nhl #penalty_summary fieldset.shoot_out, .nhl #penalty_summary fieldset.summary, .nhl #star_summary fieldset.shoot_out, .nhl #star_summary fieldset.summary {
+  border: 0;
+  margin: auto;
+  padding: 5px 20px;
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 10px; }
+  .nhl #shootout fieldset.shoot_out legend, .nhl #shootout fieldset.summary legend, .nhl #scoring_summary fieldset.shoot_out legend, .nhl #scoring_summary fieldset.summary legend, .nhl #star_summary fieldset.shoot_out legend, .nhl #star_summary fieldset.summary legend, .nhl #penalty_summary fieldset.shoot_out legend, .nhl #penalty_summary fieldset.summary legend, .nhl #star_summary fieldset.shoot_out legend, .nhl #star_summary fieldset.summary legend {
+    text-decoration: underline; }
+.nhl #shots_on_goal {
+  margin-top: 15px; }
+  .nhl #shots_on_goal table {
+    padding: 5px 20px;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 10px; }
+.nhl #standings, .nhl #stats {
+  padding: 10px; }
+  .nhl #standings .tab, .nhl #stats .tab {
+    display: block;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: -1px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px; }
+    .nhl #standings .tab.off, .nhl #stats .tab.off {
+      color: rgba(255, 255, 255, 0.4);
+      background: rgba(0, 0, 0, 0.1); }
+    .nhl #standings .tab.first, .nhl #stats .tab.first {
+      margin-left: 5px; }
+  .nhl #standings table, .nhl #stats table {
+    width: 100%;
+    -webkit-border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-collapse: collapse; }
+    .nhl #standings table tr.stat th, .nhl #stats table tr.stat th {
+      padding-left: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      color: white; }
+    .nhl #standings table tr.alt, .nhl #stats table tr.alt {
+      background: rgba(0, 0, 0, 0.2); }
+    .nhl #standings table tr.conference, .nhl #standings table tr.round, .nhl #stats table tr.conference, .nhl #stats table tr.round {
+      text-align: left; }
+      .nhl #standings table tr.conference th, .nhl #standings table tr.round th, .nhl #stats table tr.conference th, .nhl #stats table tr.round th {
+        padding-left: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        padding-top: 20px;
+        color: white; }
+    .nhl #standings table tr.conference.eastern th, .nhl #stats table tr.conference.eastern th {
+      padding-top: 10px; }
+    .nhl #standings table th, .nhl #stats table th {
+      padding: 5px 0;
+      font-weight: normal;
+      font-size: 12px;
+      color: #ffb501; }
+    .nhl #standings table td, .nhl #stats table td {
+      padding: 4px 2px;
+      font-size: 12px;
+      text-align: center; }
+    .nhl #standings table td.left, .nhl #standings table th.left, .nhl #stats table td.left, .nhl #stats table th.left {
+      text-align: left;
+      padding-left: 7px; }
+    .nhl #standings table td.right, .nhl #standings table th.right, .nhl #stats table td.right, .nhl #stats table th.right {
+      text-align: right;
+      padding-right: 7px; }
+    .nhl #standings table td.rank, .nhl #standings table th.rank, .nhl #stats table td.rank, .nhl #stats table th.rank {
+      width: 30px; }
+    .nhl #standings table td.series, .nhl #standings table th.series, .nhl #stats table td.series, .nhl #stats table th.series {
+      color: #ffb501; }
+    .nhl #standings table td.west, .nhl #standings table th.west, .nhl #stats table td.west, .nhl #stats table th.west {
+      padding-top: 20px; }
+    .nhl #standings table td.round, .nhl #standings table th.round, .nhl #stats table td.round, .nhl #stats table th.round {
+      font-size: 13px;
+      padding-top: 20px; }
+    .nhl #standings table td.round.first, .nhl #standings table th.round.first, .nhl #stats table td.round.first, .nhl #stats table th.round.first {
+      padding-top: 4px; }
+    .nhl #standings table th.left, .nhl #stats table th.left {
+      font-weight: bold; }
+    .nhl #standings table td.team, .nhl #stats table td.team {
+      padding-left: 7px;
+      text-align: left;
+      white-space: nowrap; }
+.nhl .youtube {
+  font-size: 12px;
+  padding: 11px 4px 4px; }
+  .nhl .youtube span {
+    display: inline-block;
+    background: url("/images/youtube.png") 0 0 no-repeat;
+    text-indent: -999em;
+    width: 47px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+    top: -4px;
+    left: -1px; }

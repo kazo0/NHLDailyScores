@@ -1,0 +1,864 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+  font-size: 12px;
+  color: white;
+  min-width: 357px;
+  overflow-x: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  background: black;
+  text-shadow: 2px 2px 2px black;
+  overflow-x: hidden;
+  width: 100%; }
+
+h1 {
+  font-size: 16px;
+  color: #ffb501; }
+
+#header {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 48px;
+  background: black; }
+  #header select#leagues {
+    background: url(/images/league_select_bg.png) right no-repeat;
+    height: 26px;
+    width: 125px;
+    margin: 11px 11px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    float: right; }
+  #header img {
+    margin: 10px 0 0 10px; }
+
+#nav {
+  height: 34px;
+  background: url(/images/nav_bg.png) repeat-x; }
+  #nav .left {
+    float: left;
+    width: 22px;
+    margin: 6px 0 0 10px; }
+    #nav .left img {
+      opacity: 0.5; }
+  #nav .right {
+    float: right;
+    width: 22px;
+    margin: 6px 10px 0 0; }
+    #nav .right img {
+      opacity: 0.5; }
+  #nav .center {
+    margin: 0;
+    padding-top: 10px;
+    text-align: center; }
+    #nav .center img {
+      margin: 0 7px;
+      opacity: 0.5; }
+      #nav .center img.selected {
+        opacity: 1; }
+
+#main {
+  padding: 10px 10px 15px 35px; }
+  #main.about {
+    padding: 10px; }
+    #main.about a {
+      color: #ffb501;
+      text-decoration: underline; }
+  #main.pre_game {
+    padding: 10px 10px 15px 10px; }
+
+#standings {
+  padding: 10px; }
+
+#content {
+  min-height: 345px;
+  position: relative;
+  width: 100%; }
+
+.events-show #content {
+  background: #252525; }
+
+#content > div {
+  display: block; }
+
+#footer {
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px 0;
+  background: black;
+  font-size: 12.5px;
+  text-align: center; }
+  #footer a {
+    padding: 0 7px; }
+  #footer strong {
+    display: block;
+    text-align: center;
+    font-size: 10.5px;
+    margin-top: 2px; }
+
+.right {
+  text-align: right; }
+
+.left {
+  text-align: left; }
+
+.centered {
+  text-align: center; }
+
+.clear {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.hilite {
+  color: #ffb501; }
+
+.hi-red {
+  color: red; }
+
+.small {
+  font-size: 11px; }
+
+.divider {
+  height: 2px;
+  margin: 0;
+  background: url(/images/global_divider.png) repeat-x; }
+
+.score_divider {
+  height: 2px;
+  padding: 0;
+  background: url(/images/global_scoreboard_divider.png) repeat-x; }
+
+#nogames_wrapper {
+  position: absolute;
+  top: 52%;
+  width: 100%; }
+
+.nogametext {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 12px; }
+
+.coming_soon {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 60px; }
+
+h2 {
+  font-size: 13px; }
+
+h3 {
+  font-size: 12px;
+  color: #ffb501; }
+
+p.teaser {
+  font-style: italic; }
+
+a {
+  color: white;
+  text-decoration: none; }
+  a img {
+    border: 0; }
+
+#tabs {
+  position: absolute;
+  z-index: 100;
+  width: 30px; }
+  #tabs .tab.off {
+    opacity: 0.5; }
+  #tabs div {
+    width: 30px;
+    background: url(/images/vertical_tabs.png) no-repeat;
+    text-indent: -9999px; }
+  #tabs #tab_scoring, #tabs #tab_summary {
+    height: 69px; }
+  #tabs #tab_player_stats {
+    height: 92px;
+    background-position: 0 -69px; }
+  #tabs #tab_matchup {
+    height: 67px;
+    background-position: 0 -161px; }
+  #tabs #tab_preview {
+    height: 67px;
+    background-position: 0 -229px; }
+  #tabs #tab_race_info {
+    height: 67px;
+    background-position: 0 -294px; }
+  #tabs #tab_qualifier {
+    height: 92px;
+    background-position: 0 -361px; }
+  #tabs #tab_leaderboard {
+    height: 92px;
+    background-position: 0 -458px; }
+  #tabs #tab_recap {
+    height: 67px;
+    background-position: 0 -548px; }
+  #tabs #tab_blog {
+    height: 67px;
+    background-position: 0 -614px; }
+  #tabs #tab_tournament {
+    height: 92px;
+    background-position: 0 -813px; }
+  #tabs #tab_results {
+    height: 67px;
+    background-position: 0 -907px; }
+  #tabs #tab_card {
+    height: 67px;
+    background-position: 0 -1105px; }
+  #tabs #tab_card {
+    height: 67px;
+    background-position: 0 -973px; }
+  #tabs #tab_info {
+    height: 67px;
+    background-position: 0 -1039px; }
+  #tabs #tab_scoreboard {
+    background-position: 0 -1302px;
+    height: 101px; }
+  #tabs #tab_tweets_blog {
+    height: 67px;
+    background-position: 0 -1237px; }
+  #tabs #tab_commentary {
+    height: 101px;
+    background-position: 0 -1403px; }
+  #tabs #tab_feed {
+    height: 68px;
+    background-position: 0 -1504px; }
+
+#ad_area {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 4px;
+  background: black; }
+
+fieldset#settings {
+  border: 0;
+  padding: 0;
+  padding: 15px 0 0 10px; }
+  fieldset#settings label {
+    display: block;
+    margin-bottom: 6px; }
+  fieldset#settings select#default_league, fieldset#settings select#refresh, fieldset#settings select#time_zone {
+    background: url(/images/global_select_bg.png) right no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 120px;
+    height: 26px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white; }
+  fieldset#settings input.save_bt {
+    background: url(/images/global_select_bg.png) right no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 120px;
+    height: 26px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white; }
+  fieldset#settings select#time_zone {
+    width: 295px;
+    overflow: hidden; }
+  fieldset#settings select#default_league, fieldset#settings select#refresh {
+    margin-bottom: 15px; }
+  fieldset#settings input.save_bt {
+    background-position: left top;
+    width: auto;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-indent: 2px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px; }
+
+.fav_icon {
+  display: block;
+  width: 71px;
+  height: 20px;
+  background: #272727;
+  margin-top: -4px;
+  margin-left: -1px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  text-indent: -999em; }
+  .fav_icon.remove {
+    background-position: left bottom; }
+
+#loading {
+  width: 210px;
+  margin: 20px auto;
+  -webkit-border-radius: 15px;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.8); }
+  #loading h3 {
+    margin: 10px; }
+
+.fav {
+  color: #ffb501 !important; }
+
+.favs_header {
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.58px; }
+
+.favs_spacer {
+  padding-bottom: 20px; }
+
+.notice {
+  position: relative;
+  z-index: 100;
+  padding: 10px 15px;
+  background: black;
+  margin: 0px 0 -1px;
+  border-bottom: 1px solid #555555; }
+  .notice span {
+    color: #ffb501;
+    display: block;
+    margin-bottom: 5px; }
+  .notice p {
+    margin-bottom: 0; }
+  .notice a {
+    display: block;
+    background: url(/images/global_select_bg.png) left top no-repeat;
+    width: auto;
+    float: right;
+    clear: both;
+    padding: 4px 12px 0;
+    height: 18px;
+    margin-right: 5px;
+    font-size: 12px;
+    letter-spacing: 0.58px;
+    -webkit-border-radius: 5px; }
+
+#notice {
+  padding: 10px 15px;
+  background: black;
+  margin: 0px 0 -1px;
+  border-bottom: 1px solid #555555;
+  text-align: center; }
+  #notice h2 {
+    margin: 0; }
+    #notice h2 a {
+      display: block; }
+
+input.standings {
+  margin-left: 0px;
+  background: url(/images/global_select_bg.png) right no-repeat;
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  width: 110px;
+  height: 26px;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  background-position: left top;
+  width: auto;
+  margin-top: 10px;
+  position: relative;
+  top: -1px;
+  text-align: center;
+  text-indent: 2px;
+  -webkit-border-radius: 8px; }
+
+#stories {
+  padding-top: 10px; }
+  #stories h2 {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 10px; }
+  #stories ul {
+    padding: 0; }
+    #stories ul li {
+      list-style-type: none;
+      padding-bottom: 10px;
+      font-size: 12px; }
+      #stories ul li:last-child {
+        background: none; }
+      #stories ul li li {
+        list-style-type: none;
+        margin-bottom: 0;
+        font-size: 10px;
+        padding: 8px 0 8px 15px;
+        font-style: italic;
+        background: none;
+        border-bottom: 1px solid #5b5b5b; }
+        #stories ul li li.odd {
+          background: rgba(0, 0, 0, 0.2); }
+        #stories ul li li a {
+          font-size: 13px;
+          font-style: normal;
+          line-height: 1.6;
+          padding-right: 5px;
+          display: block; }
+  #stories.show {
+    margin: 10px; }
+    #stories.show a.back {
+      background: url(/images/global_divider.png) left bottom repeat-x;
+      padding-bottom: 10px;
+      width: 100%;
+      display: block;
+      font-size: 12px; }
+      #stories.show a.back:last-child {
+        background-position: left top;
+        padding-bottom: 0;
+        padding-top: 10px;
+        margin-top: 20px; }
+    #stories.show h2 {
+      margin-bottom: -5px;
+      margin-left: 0; }
+    #stories.show h3 {
+      margin-bottom: 20px; }
+    #stories.show p {
+      line-height: 18px;
+      font-size: 12px; }
+      #stories.show p.abstract {
+        font-weight: bold; }
+
+#recap hl1, #recap h1 {
+  font-size: 14px;
+  color: #ffb501; }
+
+#preview hl1, #preview h1 {
+  font-size: 14px;
+  color: #ffb501; }
+
+#recap p, #preview p {
+  line-height: 18px;
+  font-size: 12px; }
+
+#bottom_spacer {
+  margin-bottom: 40px;
+  padding-bottom: 50px; }
+
+#date_tabs {
+  padding: 0;
+  position: relative;
+  margin: 0 0 15px 0; }
+  #date_tabs ul {
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 13px 0 0; }
+    #date_tabs ul li {
+      display: inline;
+      padding: 13px 11px;
+      -webkit-border-bottom-left-radius: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      color: #ffb501; }
+      #date_tabs ul li.tv {
+        -webkit-border-bottom-left-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        background: url(/images/tv_tab.png) no-repeat 50% 0%;
+        border-top: 0;
+        height: 24px;
+        padding-left: 32px;
+        padding-right: 18px;
+        position: absolute;
+        right: 3px;
+        top: 0px; }
+      #date_tabs ul li:first-child {
+        margin-left: 0; }
+      #date_tabs ul li.off {
+        background: rgba(0, 0, 0, 0.2);
+        color: white; }
+  #date_tabs.arrowed {
+    margin: 0 0 10px; }
+    #date_tabs.arrowed.padded {
+      padding-right: 107px; }
+    #date_tabs.arrowed ul {
+      overflow: hidden;
+      padding: 0;
+      width: 213px;
+      height: 59px; }
+      #date_tabs.arrowed ul li {
+        float: left; }
+        #date_tabs.arrowed ul li.date_tab {
+          height: 53px;
+          padding: 7px 6px 0 6px;
+          width: 103px; }
+          #date_tabs.arrowed ul li.date_tab span {
+            color: white;
+            display: block; }
+            #date_tabs.arrowed ul li.date_tab span.day {
+              font-size: 18px; }
+            #date_tabs.arrowed ul li.date_tab span.date {
+              font-size: 11px; }
+        #date_tabs.arrowed ul li.forward, #date_tabs.arrowed ul li.back, #date_tabs.arrowed ul li.date_tab {
+          -webkit-border-bottom-left-radius: 0px;
+          -webkit-border-bottom-right-radius: 0px;
+          background: transparent url(/images/league_date_nav.png) no-repeat 50% 0px; }
+        #date_tabs.arrowed ul li.back, #date_tabs.arrowed ul li.forward {
+          height: 59px;
+          padding: 0;
+          width: 49px; }
+        #date_tabs.arrowed ul li.back {
+          background-position: 0% 0px; }
+          #date_tabs.arrowed ul li.back.calendar {
+            background-position: 0% -86px; }
+        #date_tabs.arrowed ul li.forward {
+          background-position: 100% 0px; }
+          #date_tabs.arrowed ul li.forward.calendar {
+            background-position: 100% -86px; }
+        #date_tabs.arrowed ul li.off {
+          opacity: 0.5;
+          color: white;
+          display: none; }
+
+.extra_nav {
+  height: 169px;
+  overflow: hidden;
+  position: absolute;
+  right: 3px;
+  top: 0px;
+  width: 107px;
+  z-index: 50; }
+  .extra_nav ul {
+    -webkit-transition: top 0.5s ease-out;
+    background: transparent url(/images/extra_tab_sprites.png) no-repeat 0 0;
+    height: 169px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -120px;
+    width: 107px; }
+    .extra_nav ul li {
+      list-style: none; }
+      .extra_nav ul li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 0 9px;
+        width: 89px; }
+        .extra_nav ul li a:hover {
+          color: #ffb501; }
+      .extra_nav ul li.control a {
+        color: white;
+        outline: none; }
+    .extra_nav ul.open {
+      top: 0px; }
+
+table.gamelist {
+  border-bottom: 1px solid #3b3d43;
+  width: 100%;
+  padding: 8px; }
+table.alt {
+  background: rgba(0, 0, 0, 0.2); }
+
+td.team {
+  width: 40%; }
+td.loser {
+  font-weight: normal; }
+td.score {
+  width: 20%;
+  text-align: right; }
+td.time {
+  width: 30%;
+  text-align: right; }
+td.blog {
+  width: 30%;
+  text-align: right;
+  color: #ffb501; }
+td.go {
+  width: 20%;
+  text-align: right; }
+  td.go img {
+    margin-top: 3px; }
+td.video {
+  background: transparent url(/images/video.png) no-repeat right;
+  padding-right: 30px;
+  height: 14px;
+  display: none; }
+
+.list-header {
+  border-top: 1px solid #5b5b5b;
+  border-bottom: 1px solid #5b5b5b;
+  color: #c4c5c5;
+  background: #3b3b3e;
+  background: -moz-linear-gradient(top, #3b3b3e 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b3b3e), color-stop(100%, black));
+  background: -webkit-linear-gradient(top, #3b3b3e 0%, black 100%);
+  background: -o-linear-gradient(top, #3b3b3e 0%, black 100%);
+  background: -ms-linear-gradient(top, #3b3b3e 0%, black 100%);
+  background: linear-gradient(to bottom, #3b3b3e 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b3b3e', endColorstr='#000000',GradientType=0 );
+  margin: 0;
+  padding: 8px 10px; }
+
+#list h3.loading {
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0); }
+#list h3.favs_header {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0px;
+  padding: 8px; }
+
+#loading h3 {
+  text-align: center; }
+
+ul#arrow_pages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  ul#arrow_pages li {
+    display: block; }
+    ul#arrow_pages li.hide {
+      display: none; }
+
+#score table.tv, #race_info table.tv, #tournament table.tv {
+  border-collapse: collapse;
+  width: 100%; }
+  #score table.tv td, #race_info table.tv td, #tournament table.tv td {
+    background: transparent url(/images/boxscore_tv_bgs.png) repeat-x 0 0;
+    width: 50%; }
+    #score table.tv td.tvlistings, #race_info table.tv td.tvlistings, #tournament table.tv td.tvlistings {
+      padding: 0 !important; }
+      #score table.tv td.tvlistings a, #race_info table.tv td.tvlistings a, #tournament table.tv td.tvlistings a {
+        display: block;
+        height: 100%;
+        padding: 10px 0;
+        width: 100%; }
+      #score table.tv td.tvlistings span, #race_info table.tv td.tvlistings span, #tournament table.tv td.tvlistings span {
+        background: transparent url(/images/tv-icon.png) no-repeat;
+        padding: 2px 0 4px 26px; }
+    #score table.tv td.networks, #race_info table.tv td.networks, #tournament table.tv td.networks {
+      background-position: 0px -100px; }
+  #score table.tv.tv_only td.tvlistings, #race_info table.tv.tv_only td.tvlistings, #tournament table.tv.tv_only td.tvlistings {
+    -webkit-border-bottom-left-radius: 10px 10px;
+    -webkit-border-bottom-right-radius: 10px 10px; }
+  #score table.tv.networks_only td.networks, #race_info table.tv.networks_only td.networks, #tournament table.tv.networks_only td.networks {
+    -webkit-border-bottom-left-radius: 10px 10px;
+    -webkit-border-bottom-right-radius: 10px 10px; }
+  #score table.tv.both td.tvlistings, #race_info table.tv.both td.tvlistings, #tournament table.tv.both td.tvlistings {
+    -webkit-border-bottom-left-radius: 10px 10px; }
+  #score table.tv.both td.networks, #race_info table.tv.both td.networks, #tournament table.tv.both td.networks {
+    -webkit-border-bottom-right-radius: 10px 10px; }
+#score ul.boxscore_button_bar, #race_info ul.boxscore_button_bar, #tournament ul.boxscore_button_bar {
+  background: #3686db url(/images/boxscore_button_bar_bg.png) repeat-x;
+  height: 32px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+  #score ul.boxscore_button_bar a, #race_info ul.boxscore_button_bar a, #tournament ul.boxscore_button_bar a {
+    background: transparent url(/images/boxscore_buttons.png) no-repeat;
+    display: block;
+    height: 32px;
+    text-indent: -9999em;
+    width: 100%; }
+    #score ul.boxscore_button_bar a.calendar, #race_info ul.boxscore_button_bar a.calendar, #tournament ul.boxscore_button_bar a.calendar {
+      background-position: 50% -14px; }
+    #score ul.boxscore_button_bar a.calendar_on, #race_info ul.boxscore_button_bar a.calendar_on, #tournament ul.boxscore_button_bar a.calendar_on {
+      background-position: 50% -52px; }
+    #score ul.boxscore_button_bar a.track, #race_info ul.boxscore_button_bar a.track, #tournament ul.boxscore_button_bar a.track {
+      background-position: 50% -97px; }
+    #score ul.boxscore_button_bar a.track_on, #race_info ul.boxscore_button_bar a.track_on, #tournament ul.boxscore_button_bar a.track_on {
+      background-position: 50% -142px; }
+    #score ul.boxscore_button_bar a.video_video, #race_info ul.boxscore_button_bar a.video_video, #tournament ul.boxscore_button_bar a.video_video {
+      background-position: 50% -187px; }
+    #score ul.boxscore_button_bar a.video_video_on, #race_info ul.boxscore_button_bar a.video_video_on, #tournament ul.boxscore_button_bar a.video_video_on {
+      background-position: 50% -232px; }
+    #score ul.boxscore_button_bar a.video_pick, #race_info ul.boxscore_button_bar a.video_pick, #tournament ul.boxscore_button_bar a.video_pick {
+      background-position: 50% -277px; }
+    #score ul.boxscore_button_bar a.video_pick_on, #race_info ul.boxscore_button_bar a.video_pick_on, #tournament ul.boxscore_button_bar a.video_pick_on {
+      background-position: 50% -322px; }
+    #score ul.boxscore_button_bar a.video_preview, #race_info ul.boxscore_button_bar a.video_preview, #tournament ul.boxscore_button_bar a.video_preview {
+      background-position: 50% -367px; }
+    #score ul.boxscore_button_bar a.video_preview_on, #race_info ul.boxscore_button_bar a.video_preview_on, #tournament ul.boxscore_button_bar a.video_preview_on {
+      background-position: 50% -412px; }
+    #score ul.boxscore_button_bar a.video_ingame, #race_info ul.boxscore_button_bar a.video_ingame, #tournament ul.boxscore_button_bar a.video_ingame {
+      background-position: 50% -457px; }
+    #score ul.boxscore_button_bar a.video_ingame_on, #race_info ul.boxscore_button_bar a.video_ingame_on, #tournament ul.boxscore_button_bar a.video_ingame_on {
+      background-position: 50% -502px; }
+    #score ul.boxscore_button_bar a.video_hilights, #race_info ul.boxscore_button_bar a.video_hilights, #tournament ul.boxscore_button_bar a.video_hilights {
+      background-position: 50% -547px; }
+    #score ul.boxscore_button_bar a.video_hilights_on, #race_info ul.boxscore_button_bar a.video_hilights_on, #tournament ul.boxscore_button_bar a.video_hilights_on {
+      background-position: 50% -592px; }
+    #score ul.boxscore_button_bar a.video_recap, #race_info ul.boxscore_button_bar a.video_recap, #tournament ul.boxscore_button_bar a.video_recap {
+      background-position: 50% -637px; }
+    #score ul.boxscore_button_bar a.video_recap_on, #race_info ul.boxscore_button_bar a.video_recap_on, #tournament ul.boxscore_button_bar a.video_recap_on {
+      background-position: 50% -682px; }
+  #score ul.boxscore_button_bar li, #race_info ul.boxscore_button_bar li, #tournament ul.boxscore_button_bar li {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    float: left;
+    height: 32px;
+    list-style: none;
+    text-align: center; }
+    #score ul.boxscore_button_bar li:last-child, #race_info ul.boxscore_button_bar li:last-child, #tournament ul.boxscore_button_bar li:last-child {
+      border: none; }
+  #score ul.boxscore_button_bar.buttons_3 li, #race_info ul.boxscore_button_bar.buttons_3 li, #tournament ul.boxscore_button_bar.buttons_3 li {
+    width: 33.2%; }
+  #score ul.boxscore_button_bar.buttons_2 li, #race_info ul.boxscore_button_bar.buttons_2 li, #tournament ul.boxscore_button_bar.buttons_2 li {
+    width: 49.8%; }
+  #score ul.boxscore_button_bar.buttons_1, #race_info ul.boxscore_button_bar.buttons_1, #tournament ul.boxscore_button_bar.buttons_1 {
+    background: none;
+    margin-bottom: 5px; }
+    #score ul.boxscore_button_bar.buttons_1 li, #race_info ul.boxscore_button_bar.buttons_1 li, #tournament ul.boxscore_button_bar.buttons_1 li {
+      width: 100%; }
+    #score ul.boxscore_button_bar.buttons_1 a, #race_info ul.boxscore_button_bar.buttons_1 a, #tournament ul.boxscore_button_bar.buttons_1 a {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background: #3686db url(/images/boxscore_button_bar_bg.png) 0 0 repeat-x;
+      display: block;
+      margin: 0 auto; }
+      #score ul.boxscore_button_bar.buttons_1 a span, #race_info ul.boxscore_button_bar.buttons_1 a span, #tournament ul.boxscore_button_bar.buttons_1 a span {
+        background: transparent url(/images/boxscore_buttons.png) 50% -15px no-repeat;
+        display: block;
+        width: 100%;
+        height: 32px; }
+      #score ul.boxscore_button_bar.buttons_1 a.calendar, #race_info ul.boxscore_button_bar.buttons_1 a.calendar, #tournament ul.boxscore_button_bar.buttons_1 a.calendar {
+        width: 105px; }
+        #score ul.boxscore_button_bar.buttons_1 a.calendar span, #race_info ul.boxscore_button_bar.buttons_1 a.calendar span, #tournament ul.boxscore_button_bar.buttons_1 a.calendar span {
+          background-position: 50% -15px; }
+      #score ul.boxscore_button_bar.buttons_1 a.calendar_on, #race_info ul.boxscore_button_bar.buttons_1 a.calendar_on, #tournament ul.boxscore_button_bar.buttons_1 a.calendar_on {
+        width: 105px; }
+        #score ul.boxscore_button_bar.buttons_1 a.calendar_on span, #race_info ul.boxscore_button_bar.buttons_1 a.calendar_on span, #tournament ul.boxscore_button_bar.buttons_1 a.calendar_on span {
+          background-position: 50% -52px; }
+      #score ul.boxscore_button_bar.buttons_1 a.track, #race_info ul.boxscore_button_bar.buttons_1 a.track, #tournament ul.boxscore_button_bar.buttons_1 a.track {
+        width: 80px; }
+        #score ul.boxscore_button_bar.buttons_1 a.track span, #race_info ul.boxscore_button_bar.buttons_1 a.track span, #tournament ul.boxscore_button_bar.buttons_1 a.track span {
+          background-position: 50% -97px; }
+      #score ul.boxscore_button_bar.buttons_1 a.track_on, #race_info ul.boxscore_button_bar.buttons_1 a.track_on, #tournament ul.boxscore_button_bar.buttons_1 a.track_on {
+        width: 105px; }
+        #score ul.boxscore_button_bar.buttons_1 a.track_on span, #race_info ul.boxscore_button_bar.buttons_1 a.track_on span, #tournament ul.boxscore_button_bar.buttons_1 a.track_on span {
+          background-position: 50% -142px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_video, #race_info ul.boxscore_button_bar.buttons_1 a.video_video, #tournament ul.boxscore_button_bar.buttons_1 a.video_video {
+        width: 84px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_video span, #race_info ul.boxscore_button_bar.buttons_1 a.video_video span, #tournament ul.boxscore_button_bar.buttons_1 a.video_video span {
+          background-position: 50% -187px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_video_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_video_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_video_on {
+        width: 84px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_video_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_video_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_video_on span {
+          background-position: 50% -232px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_pick, #race_info ul.boxscore_button_bar.buttons_1 a.video_pick, #tournament ul.boxscore_button_bar.buttons_1 a.video_pick {
+        width: 78px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_pick span, #race_info ul.boxscore_button_bar.buttons_1 a.video_pick span, #tournament ul.boxscore_button_bar.buttons_1 a.video_pick span {
+          background-position: 50% -277px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_pick_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_pick_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_pick_on {
+        width: 78px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_pick_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_pick_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_pick_on span {
+          background-position: 50% -322px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_preview, #race_info ul.boxscore_button_bar.buttons_1 a.video_preview, #tournament ul.boxscore_button_bar.buttons_1 a.video_preview {
+        width: 97px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_preview span, #race_info ul.boxscore_button_bar.buttons_1 a.video_preview span, #tournament ul.boxscore_button_bar.buttons_1 a.video_preview span {
+          background-position: 50% -367px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_preview_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_preview_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_preview_on {
+        width: 97px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_preview_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_preview_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_preview_on span {
+          background-position: 50% -412px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_ingame, #race_info ul.boxscore_button_bar.buttons_1 a.video_ingame, #tournament ul.boxscore_button_bar.buttons_1 a.video_ingame {
+        width: 98px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_ingame span, #race_info ul.boxscore_button_bar.buttons_1 a.video_ingame span, #tournament ul.boxscore_button_bar.buttons_1 a.video_ingame span {
+          background-position: 50% -457px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_ingame_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_ingame_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_ingame_on {
+        width: 98px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_ingame_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_ingame_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_ingame_on span {
+          background-position: 50% -502px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_hilights, #race_info ul.boxscore_button_bar.buttons_1 a.video_hilights, #tournament ul.boxscore_button_bar.buttons_1 a.video_hilights {
+        width: 94px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_hilights span, #race_info ul.boxscore_button_bar.buttons_1 a.video_hilights span, #tournament ul.boxscore_button_bar.buttons_1 a.video_hilights span {
+          background-position: 50% -547px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_hilights_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_hilights_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_hilights_on {
+        width: 94px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_hilights_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_hilights_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_hilights_on span {
+          background-position: 50% -592px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_recap, #race_info ul.boxscore_button_bar.buttons_1 a.video_recap, #tournament ul.boxscore_button_bar.buttons_1 a.video_recap {
+        width: 88px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_recap span, #race_info ul.boxscore_button_bar.buttons_1 a.video_recap span, #tournament ul.boxscore_button_bar.buttons_1 a.video_recap span {
+          background-position: 50% -637px; }
+      #score ul.boxscore_button_bar.buttons_1 a.video_recap_on, #race_info ul.boxscore_button_bar.buttons_1 a.video_recap_on, #tournament ul.boxscore_button_bar.buttons_1 a.video_recap_on {
+        width: 88px; }
+        #score ul.boxscore_button_bar.buttons_1 a.video_recap_on span, #race_info ul.boxscore_button_bar.buttons_1 a.video_recap_on span, #tournament ul.boxscore_button_bar.buttons_1 a.video_recap_on span {
+          background-position: 50% -682px; }
+
+#race_info #tv_divider, #tournament #tv_divider {
+  margin: 0; }
+
+.tab_page strong, .content strong {
+  color: #ffb501; }
+.tab_page .datetime, .content .datetime {
+  margin: 0; }
+.tab_page .box, .content .box {
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 5px 0;
+  padding: 5px 10px; }
+.tab_page table.striped, .content table.striped {
+  border-collapse: collapse;
+  margin: 5px 0;
+  width: 100%; }
+  .tab_page table.striped th.jersey, .tab_page table.striped td.jersey, .content table.striped th.jersey, .content table.striped td.jersey {
+    width: 27px; }
+  .tab_page table.striped th.place, .tab_page table.striped td.place, .content table.striped th.place, .content table.striped td.place {
+    width: 18px; }
+  .tab_page table.striped th, .content table.striped th {
+    color: #ffb501; }
+  .tab_page table.striped td, .tab_page table.striped th, .content table.striped td, .content table.striped th {
+    padding: 5px 8px;
+    vertical-align: top; }
+  .tab_page table.striped tr.odd, .content table.striped tr.odd {
+    background: rgba(0, 0, 0, 0.2); }
+
+.nested_tabs {
+  -webkit-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1); }
+  .nested_tabs .tab {
+    margin-top: 5px; }
+
+#video_icon a {
+  background: url(/images/video_icon.png) no-repeat;
+  display: block;
+  height: 20px;
+  margin: 0 auto;
+  text-indent: -9999em; }
+  #video_icon a.video_icon_video {
+    background-position: 0 0;
+    width: 76px; }
+  #video_icon a.video_icon_pick {
+    background-position: 0 -23px;
+    width: 67px; }
+  #video_icon a.video_icon_preview {
+    background-position: 0 -46px;
+    width: 96px; }
+  #video_icon a.video_icon_ingame {
+    background-position: 0 -68px;
+    width: 94px; }
+  #video_icon a.video_icon_hilights {
+    background-position: 0 -91px;
+    width: 98px; }
+  #video_icon a.video_icon_recap {
+    background-position: 0 -114px;
+    width: 80px; }
+
+.nav-links {
+  overflow: hidden;
+  padding: 8px 12px 5px 12px; }
+  .nav-links a {
+    background: #272727;
+    padding: 5px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px; }
+    .nav-links a.back {
+      float: left; }
+    .nav-links a.forward {
+      float: right; }
