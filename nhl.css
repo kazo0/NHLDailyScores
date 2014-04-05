@@ -11,12 +11,12 @@
   width: 100%;
   padding: 8px; }
 .navNext {
-    position: absolute;
-    right: 0px;
-    width: 55px;
+    position: relative;
+    float:right;
 }
 .header{
     margin:0;
+ 
 }
 .dateTitle {
     margin:0;
