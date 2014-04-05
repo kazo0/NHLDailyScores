@@ -29,7 +29,7 @@ $(document).ready(function () {
             });
 
         });
-        if (!f)
+        if(!f.length)
         {
             $("#games").append("No games to display");
         }
