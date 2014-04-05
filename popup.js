@@ -1,32 +1,48 @@
 
+$(document).ready(function () {
     $.ajax({
         url: "http://m.thescore.com/nhl"
-    }).done(function( html )
-        {
-            var date = getDateString();
-            var find = "#" + date + ".games";
-            
-            var str = $(html).find(find).each(function(i, el)
-            {
-                $(this).find(".gamelist").each(function(i1, el1)
-                {
-                    var src = "/pp.png";
-                    $(el1).find(".go").remove();   
-                    $('img[alt="Nhl_icon_powerplay"]').attr("src", src);                
-                    $("p").append(el1);
-                });
-                
-            });
+    }).done(function(html)
+    {
+        globalHtml = html;
+        var date = getDateString();
+        var find = "#" + date + ".games";
+        offset = 0;
+        showScores(html, date);
             
             
-        });
+    });
 
-function getDateString()
+    function showScores(html, date)
+    {
+        $("#games").empty();
+        var find = "#" + date + ".games";
+        $("p.date").empty();
+        $("p.date").append(fancify(date));
+        var f = $(html).find(find);
+        var str = $(html).find(find).each(function (i, el) {
+            $(this).find(".gamelist").each(function (i1, el1) {
+                var src = "/pp.png";
+                $(el1).find(".go").remove();
+                $('img[alt="Nhl_icon_powerplay"]').attr("src", src);
+                $("#games").append(el1);
+            });
+
+        });
+        if (!f)
+        {
+            $("#games").append("No games to display");
+        }
+
+    }
+
+function getDateString(offset)
 {
+    offset = offset || 0;
     var m = getMonthString();
     var date = new Date();
     var day = date.getDate();
-    
+    day = day + offset;
     if (day < 10)
     {
         day = "0" + day;
@@ -37,6 +53,20 @@ function getDateString()
 
 }
 
+function fancify(date)
+{
+    var m_names = new Array("January", "February", "March", 
+    "April", "May", "June", "July", "August", "September", 
+    "October", "November", "December");
+
+    var d = new Date();
+    var n = d.getMonth();
+
+    var month = m_names[n];
+    var day = date.substr(date.length - 2);
+
+    return month + " " + day;
+}
 function getMonthString()
 {
     var d = new Date();
@@ -84,7 +114,14 @@ function getMonthString()
     return month;
 }
 
-$("#dayNav").click(function ()
-{
-    alert("HI");
+    $("a.navNext").click(function () {
+        offset = offset + 1;
+        showScores(globalHtml, getDateString(offset));
+    });
+
+
+    $("a.navPrev").click(function () {
+        offset = offset - 1;
+        showScores(globalHtml, getDateString(offset));
+    });
 });
