@@ -39,17 +39,19 @@ $(document).ready(function () {
 function getDateString(offset)
 {
     offset = offset || 0;
-    var m = getMonthString();
-    var date = new Date();
-    var day = date.getDate();
-    day = day + offset;
+    var d = new Date();
+    d.setDate(d.getDay() + offset);
+
+    var m = getMonthString(d.getMonth());
+    var day = d.getDate();
+
     if (day < 10)
     {
         day = "0" + day;
     }
     
-    var d = m + "_" + day;
-    return d;
+    var date = m + "_" + day;
+    return date;
 
 }
 
@@ -59,18 +61,20 @@ function fancify(date)
     "April", "May", "June", "July", "August", "September", 
     "October", "November", "December");
 
+    
     var d = new Date();
-    var n = d.getMonth();
+    d.setDate(d.getDay() + offset);
 
-    var month = m_names[n];
+    var m = d.getMonth();
+
+    var month = m_names[m];
     var day = date.substr(date.length - 2);
 
     return month + " " + day;
 }
-function getMonthString()
+function getMonthString(monthNum)
 {
-    var d = new Date();
-    var n = d.getMonth() + 1;
+    var n = monthNum + 1;
     var month = "";
     switch(n)
     {
