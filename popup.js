@@ -39,8 +39,8 @@ $(document).ready(function () {
 function getDateString(offset)
 {
     offset = offset || 0;
-    var d = new Date();
-    d.setDate(d.getDay() + offset);
+
+    var d = getOffsetDayNum(offset);
 
     var m = getMonthString(d.getMonth());
     var day = d.getDate();
@@ -62,8 +62,7 @@ function fancify(date)
     "October", "November", "December");
 
     
-    var d = new Date();
-    d.setDate(d.getDay() + offset);
+    var d = getOffsetDayNum(offset);
 
     var m = d.getMonth();
 
@@ -71,6 +70,13 @@ function fancify(date)
     var day = date.substr(date.length - 2);
 
     return month + " " + day;
+}
+
+function getOffsetDayNum(offset)
+{
+    var d = new Date();
+    d.setDate((d.getDay() - 1) + offset);
+    return d;
 }
 function getMonthString(monthNum)
 {
