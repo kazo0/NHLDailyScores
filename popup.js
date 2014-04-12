@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     function showScores(html, date)
     {
+        $("#container").css("width", "auto");
         $("#games").empty();
         var find = "#" + date + ".games";
         $("p.date").empty();
@@ -39,7 +40,7 @@ $(document).ready(function () {
 function getDateString(offset)
 {
     offset = offset || 0;
-
+   
     var d = getOffsetDayNum(offset);
 
     var m = getMonthString(d.getMonth());
@@ -75,7 +76,7 @@ function fancify(date)
 function getOffsetDayNum(offset)
 {
     var d = new Date();
-    d.setDate((d.getDay() - 1) + offset);
+    d.setDate((d.getDate()) + offset);
     return d;
 }
 function getMonthString(monthNum)

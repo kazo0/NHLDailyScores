@@ -9,17 +9,23 @@ body {
   font-family: Helvetica;
   font-size: 12px;
   color: white;
-  min-width: 357px;
+  min-width: 400px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -webkit-text-size-adjust: none;
   background: black;
   text-shadow: 2px 2px 2px black;
+  margin-right:20px;
   width: 100%; }
 
 h1 {
   font-size: 16px;
   color: #ffb501; }
+
+#container {
+    width:auto;
+    overflow-y:hidden;
+}
 
 #header {
   box-sizing: border-box;
